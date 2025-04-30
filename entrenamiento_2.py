@@ -60,7 +60,7 @@ while task != 5 :
                     # Permitir al usuario ingresar una lista de calificaciones (separadas por comas)
                     # Calcular y mostrar el promedio de las calificaciones en la lista
 
-                        case2 = int(input("Ingrese las notas a calcular\n¡Deben estar separadas por coma!: ")) #sprint
+                        case2 = int(input("Ingrese las notas a calcular\n¡Deben estar separadas por coma!: ")) #split
                     case 3:
 
                     # Preguntar al usuario por un valor específico
