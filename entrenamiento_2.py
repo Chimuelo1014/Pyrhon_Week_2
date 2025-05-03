@@ -61,7 +61,11 @@ while task != 5 :
                                         case2 = []
                                         case22 = input("Ingrese las notas a calcular\n¡Deben estar separadas por coma!: ") #split
                                         case22 = case22.split(",")  #divide el str por comas
-                                        case2 = [float(num) for num in case22]  #va convirtiendo a entero 
+                                        case2 = [int(num) for num in case22]  #va convirtiendo a entero 
+                                        
+                                        if any(num < 0 or num > 100 for num in case2):
+                                            print("Error, ingrese un valor valido")
+                                            continue
                                         
                                         prom = sum(case2)/len(case2) 
                                         print("EL promedio de las notas ingresadas es de: ",prom)
@@ -83,6 +87,10 @@ while task != 5 :
                                     if not case2 :
                                         print("Ingrese valores primero en la seccion 2: ")
                                         break
+                                    elif case3 < 0 or case3>100:
+                                        print("¡Ingrese un valor valido!")
+                                        
+                                        continue
                                     else:
                                         for i in case2:
                                             if i > case3 :
@@ -109,6 +117,10 @@ while task != 5 :
                                     if not case2 :
                                         print("Ingrese valores primero en la seccion 2: ")
                                         break
+                                    elif case3 < 0 or case3>100:
+                                        print("¡Ingrese un valor valido!")
+                                        
+                                        continue
                                     else:
                                         countin = case2.count(case3) #se utiliza count que nos cuentas las vece que esta la variable en la lista
                                         
